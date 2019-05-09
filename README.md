@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Azureday
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
@@ -29,4 +28,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # azureday
 Simple application for AzureDay workshop
->>>>>>> f696313be4c371f064b94cb904372fd5282b566b
