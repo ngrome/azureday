@@ -1,0 +1,14 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70vh;
+  align-items: center;
+}
+
+.about h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 7rem;
+  letter-spacing: 0.2rem;
+}
