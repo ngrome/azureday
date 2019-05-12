@@ -3,8 +3,23 @@ import { BlogPost, Blog, Author } from './shared/models';
 export const Blogs: { [key: number]: Blog } = {
   0: {
     blogId: 0,
-    name: 'Angular',
-    description: 'Angular Blog',
+    name: 'Frontend',
+    description: 'Topics on frontend dev community',
+  },
+  1: {
+    blogId: 1,
+    name: 'Backend',
+    description: 'Topics on backend dev community',
+  },
+  2: {
+    blogId: 2,
+    name: 'Programming',
+    description: 'General Programming Topics',
+  },
+  3: {
+    blogId: 3,
+    name: 'Others',
+    description: 'Off Topics',
   },
 };
 
@@ -13,6 +28,7 @@ export const BlogPosts: { [key: number]: BlogPost } = {
     blogPostId: 0,
     blogId: 0,
     title: 'Hello Angular',
+    postImageUrl: 'https://cdn-images-1.medium.com/max/1600/1*aYD002x4UBQ4iJCRbiKJrg.png',
     content: 'This is the long test to the introductionary Angular World',
     slug: 'http://',
     authorId: 0,
@@ -23,7 +39,7 @@ export const BlogPosts: { [key: number]: BlogPost } = {
     title: 'Angular and Material',
     postImageUrl:
       // tslint:disable-next-line:max-line-length
-      'https://camo.githubusercontent.com/84fe5f1dac571664269fb219ab48f6414e002327/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f616e67756c61722d6d6174657269616c2d657874656e73696f6e732f6c696e6b2d707265766965772f6173736574732f616e67756c61722d6d6174657269616c2d657874656e73696f6e732d6c6f676f2e706e67',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFjZQS05wcv2GfHbCQfk3BZjGOOwcFQuqvELn9Y9cq9_7Apsti',
     content: 'This is the long test to the introductionary Angular Material',
     slug: 'http://',
     authorId: 1,
@@ -34,7 +50,27 @@ export const BlogPosts: { [key: number]: BlogPost } = {
     title: 'Angular and RxJS',
     content: 'This is the long test to the introductionary Angular RxJS',
     slug: 'http://',
+    postImageUrl:
+      'https://malcoded.com/static/4416ca096472d7da64817eb3bd2c6687/7b279/Angular-RxJs.png',
     authorId: 2,
+  },
+  3: {
+    blogPostId: 2,
+    blogId: 0,
+    title: 'Angular and NgRx',
+    content: 'This is the long test to the introductionary Angular NgRx',
+    slug: 'http://',
+    authorId: 0,
+  },
+  4: {
+    blogPostId: 3,
+    blogId: 1,
+    title: 'C#',
+    content: 'This is the long test to the introductionary C#',
+    slug: 'http://',
+    postImageUrl:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2_aqs5Mv3_My27UyoTFv-sxVAJoRYgxqoSiDZUaY2_TjgiQVy',
+    authorId: 0,
   },
 };
 

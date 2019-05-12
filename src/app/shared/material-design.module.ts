@@ -5,23 +5,29 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatGridListModule } from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
+    MatGridListModule,
     MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
     MatTabsModule,
+    LayoutModule,
   ],
   exports: [
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
+    MatGridListModule,
     MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
     MatTabsModule,
+    LayoutModule,
   ],
 })
 export class MaterialDesignModule {}
