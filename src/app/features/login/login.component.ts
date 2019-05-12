@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-
     if (this.adalSvc.userInfo.authenticated) {
       this.router.navigate([returnUrl]);
     } else {

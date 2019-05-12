@@ -7,12 +7,25 @@
     <mat-icon>home</mat-icon>
     <span>Home</span>
   </button>
-  <button mat-menu-item [routerLink]="['dashboard']">
+
+  <button *ngIf="user" mat-menu-item [routerLink]="['dashboard']">
     <mat-icon>question_answer</mat-icon>
     <span>Dashboard</span>
   </button>
+
   <button mat-menu-item [routerLink]="['about']">
     <mat-icon>question_answer</mat-icon>
     <span>About</span>
   </button>
+
+  <button *ngIf="!user; else loggedOut" mat-menu-item [routerLink]="['login']">
+    <mat-icon>face</mat-icon>
+    <span>Login</span>
+  </button>
+  <ng-template #loggedOut>
+    <button mat-menu-item [routerLink]="['logout']">
+      <mat-icon>logout</mat-icon>
+      <span>Logout {{ user.userName }}</span>
+    </button>
+  </ng-template>
 </mat-menu>

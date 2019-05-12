@@ -14,8 +14,7 @@ import {
   MatButtonModule,
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
-import { AdalService, AdalInterceptor } from 'adal-angular4';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AdalService, AdalGuard } from 'adal-angular4';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,7 +32,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     MatButtonModule,
     LayoutModule,
   ],
-  providers: [AdalService, { provide: HTTP_INTERCEPTORS, useClass: AdalInterceptor, multi: true }],
+  providers: [AdalService, AdalGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

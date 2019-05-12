@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { AdalService } from 'adal-angular4';
 
 @Component({
   selector: 'app-dash',
@@ -31,10 +30,7 @@ export class DashComponent implements OnInit {
     }),
   );
 
-  constructor(private adal: AdalService, private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
-  ngOnInit() {
-    this.adal.handleWindowCallback();
-    // you can do redirect here to another page after login
-  }
+  ngOnInit() {}
 }
