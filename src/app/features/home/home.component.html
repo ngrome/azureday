@@ -1,5 +1,17 @@
 <h1>Welcome to {{ title }}!</h1>
-
-<div class="button-row">
-  <button mat-raised-button>Home Page</button>
+<div class="grid-container">
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let blog of blogs">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{ blog.name }}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>{{ blog.description }}</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>

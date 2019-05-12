@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Post, Level } from 'src/app/shared/post';
-import { Posts } from 'src/app/shared/db-fake';
+import { Blog } from 'src/app/shared/models';
+import { Blogs } from 'src/app/db-fake';
 
 @Component({
   templateUrl: './home.component.html',
@@ -8,16 +8,12 @@ import { Posts } from 'src/app/shared/db-fake';
 })
 export class HomeComponent implements OnInit {
   title = 'Azure Day 2019';
-  beginnerTopics: Post[];
-  mediumTopics: Post[];
-  advancedTopics: Post[];
+  blogs: Blog[] = [];
 
   constructor() {}
 
   ngOnInit() {
-    const posts = Object.values(Posts);
-    this.beginnerTopics = posts.filter(post => post.level === Level.BEGINNER);
-    this.mediumTopics = posts.filter(post => post.level === Level.MEDIUM);
-    this.advancedTopics = posts.filter(post => post.level === Level.ADVANCED);
+    this.blogs = Object.values(Blogs).map(blog => blog);
+    console.log(this.blogs);
   }
 }
