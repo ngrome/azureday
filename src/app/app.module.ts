@@ -6,13 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { FeaturesModule } from './features/features.module';
 import { CoreModule } from './core/core.module';
-import {
-  MatGridListModule,
-  MatCardModule,
-  MatMenuModule,
-  MatIconModule,
-  MatButtonModule,
-} from '@angular/material';
+
 import { LayoutModule } from '@angular/cdk/layout';
 import { AdalService, AdalGuard } from 'adal-angular4';
 
@@ -25,11 +19,7 @@ import { AdalService, AdalGuard } from 'adal-angular4';
     SharedModule,
     CoreModule,
     FeaturesModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
+
     LayoutModule,
   ],
   providers: [AdalService, AdalGuard],

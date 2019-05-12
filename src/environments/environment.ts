@@ -6,4 +6,5 @@ export const environment = {
     redirectUri: 'http://localhost:4200/auth-callback',
     postLogoutRedirectUri: 'http://localhost:4200',
   },
+  backendUrl: 'https://azuredayngworkshop.azurewebsites.net',
 };

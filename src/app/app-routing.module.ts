@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
 import { AboutComponent } from './features/about/about.component';
-import { DashComponent } from './features/dash/dash.component';
+import { DashComponent } from './dash/dash.component';
 import { LoginComponent } from './features/login/login.component';
 import { LogoutComponent } from './features/logout/logout.component';
 import { AuthCallbackComponent } from './core/auth-callback/auth-callback.component';
@@ -32,8 +32,7 @@ const routes: Routes = [
   { path: 'auth-callback', component: AuthCallbackComponent },
   {
     path: 'dashboard',
-    component: DashComponent,
-    canActivate: [AdalGuard],
+    loadChildren: './dash/dash.module#DashModule',
   },
   { path: '**', pathMatch: 'full', redirectTo: 'error/404' },
 ];

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { AuthService } from 'src/app/core/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dash',
@@ -14,7 +16,7 @@ export class DashComponent implements OnInit {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Card 1', cols: 1, rows: 1 },
+          { title: 'Blog', content: 'Blog Controls', cols: 1, rows: 1 },
           { title: 'Card 2', cols: 1, rows: 1 },
           { title: 'Card 3', cols: 1, rows: 1 },
           { title: 'Card 4', cols: 1, rows: 1 },
@@ -22,7 +24,7 @@ export class DashComponent implements OnInit {
       }
 
       return [
-        { title: 'Card 1', cols: 2, rows: 1 },
+        { title: 'Blog', cols: 2, rows: 1 },
         { title: 'Card 2', cols: 1, rows: 1 },
         { title: 'Card 3', cols: 1, rows: 2 },
         { title: 'Card 4', cols: 1, rows: 1 },
@@ -30,7 +32,15 @@ export class DashComponent implements OnInit {
     }),
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private authService: AuthService,
+    private router: Router,
+  ) {
+    if (!this.authService.isLogged()) {
+      this.router.navigate(['/login']);
+    }
+  }
 
   ngOnInit() {}
 }
