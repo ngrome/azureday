@@ -49,10 +49,12 @@ export class AuthService {
 
   isLogged() {
     // return localStorage.getItem('currentUser');
+    console.log('isLogged');
     if (this.adalSvc.userInfo.authenticated && localStorage.getItem('currentUser')) {
       // this.authSvc.isLoggedIn = true;
       return true;
     } else {
+      localStorage.removeItem('currentUser');
       return false;
     }
   }

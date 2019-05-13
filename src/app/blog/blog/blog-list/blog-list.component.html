@@ -1,7 +1,6 @@
-<h2 class="title">Welcome to {{ title }}!</h2>
 <mat-tab-group>
   <div class="blog-lists">
-    <mat-tab *ngFor="let blog of blogs$ | async" label="{{ blog.name }}">
+    <mat-tab *ngFor="let blog of blogs" label="{{ blog.name }}">
       <app-blogpost [data]="getPosts(blog.blogId)"></app-blogpost>
     </mat-tab>
   </div>

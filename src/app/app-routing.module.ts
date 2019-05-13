@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './features/home/home.component';
-import { AboutComponent } from './features/about/about.component';
-import { DashComponent } from './dash/dash.component';
-import { LoginComponent } from './features/login/login.component';
-import { LogoutComponent } from './features/logout/logout.component';
+import { HomeComponent } from './home/home/home.component';
+import { AboutComponent } from './home/about/about.component';
+import { LoginComponent } from './dash/login/login.component';
 import { AuthCallbackComponent } from './core/auth-callback/auth-callback.component';
-import { AdalGuard } from 'adal-angular4';
+import { LogoutComponent } from './dash/logout/logout.component';
 
 const routes: Routes = [
   {

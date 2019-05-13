@@ -8,7 +8,7 @@ import { takeWhile } from 'rxjs/operators';
   templateUrl: './blogpost.component.html',
   styleUrls: ['./blogpost.component.scss'],
 })
-export class BlogpostComponent implements OnInit {
+export class BlogPostComponent implements OnInit {
   private _data = new BehaviorSubject<BlogPost[]>([]);
   @Input()
   set data(value) {

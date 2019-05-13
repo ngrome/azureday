@@ -4,11 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { FeaturesModule } from './features/features.module';
+
 import { CoreModule } from './core/core.module';
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { AdalService, AdalGuard } from 'adal-angular4';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,8 +19,7 @@ import { AdalService, AdalGuard } from 'adal-angular4';
     AppRoutingModule,
     SharedModule,
     CoreModule,
-    FeaturesModule,
-
+    HomeModule,
     LayoutModule,
   ],
   providers: [AdalService, AdalGuard],
