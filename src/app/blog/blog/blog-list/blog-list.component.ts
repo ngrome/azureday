@@ -1,24 +1,25 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Blog, BlogPost } from 'src/app/shared/models';
 import { BlogPostService } from '../../blogpost/blogpost.service';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import { BlogPost } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-blog-list',
   templateUrl: './blog-list.component.html',
-  styles: [],
+  styleUrls: ['./blog-list.component.scss'],
 })
-export class BlogListComponent implements OnInit {
+export class BlogListComponent {
   @Input() blogs;
-  posts$: Observable<BlogPost[]>;
+  @Output() blogClicked: EventEmitter<Blog> = new EventEmitter<Blog>();
+  @Output() postClicked: EventEmitter<BlogPost> = new EventEmitter<BlogPost>();
+  @Input() posts = [];
+
   constructor(private blogPostService: BlogPostService) {}
 
-  ngOnInit() {
-    this.posts$ = this.blogPostService.findAllBlogPost().pipe(map(posts => posts));
+  selectedBlog({ index }) {
+    this.blogClicked.emit(this.blogs[index]);
   }
 
-  getPosts(blogId: number) {
-    return this.posts$.pipe(map(posts => posts.filter(post => post.blogId === blogId)));
+  handleSelectedPost(post: BlogPost) {
+    this.postClicked.emit(post);
   }
 }

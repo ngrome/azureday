@@ -12,8 +12,8 @@ const routes: Routes = [
     loadChildren: './error-pages/error-pages.module#ErrorPagesModule',
   },
   {
-    path: '',
-    component: HomeComponent,
+    path: 'home',
+    loadChildren: './home/home.module#HomeModule',
   },
   {
     path: 'about',
@@ -32,6 +32,7 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: './dash/dash.module#DashModule',
   },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', pathMatch: 'full', redirectTo: 'error/404' },
 ];
 

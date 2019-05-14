@@ -1,0 +1,16 @@
+<div *ngIf="post" class="post-detail-container">
+  <mat-card class="post-card mat-elevation-z10">
+    <mat-card-header>
+      <mat-card-title>{{ post.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image *ngIf="post.postImageUrl" [src]="post.postImageUrl" />
+    <mat-card-content>
+      <p>{{ post.content }}</p>
+    </mat-card-content>
+    <mat-card-actions class="post-card-actions">
+      <button mat-raised-button color="accent">
+        Edit Post
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

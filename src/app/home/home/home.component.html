@@ -1,6 +1,7 @@
 <h2 class="title">Welcome to {{ title }}!</h2>
-<app-blog-list [blogs]="blogs$ | async"></app-blog-list>
-
-<!--
-
--->
+<app-blog-list
+  [blogs]="blogs$ | async"
+  [posts]="posts"
+  (blogClicked)="handleBlogPost($event)"
+  (postClicked)="handlePost($event)"
+></app-blog-list>

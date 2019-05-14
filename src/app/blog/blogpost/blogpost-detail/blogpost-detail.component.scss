@@ -1,0 +1,22 @@
+img {
+  min-height: 12rem;
+  max-height: 16rem;
+  min-width: 28rem;
+  max-width: 32rem;
+  border: 0.1px solid #333;
+}
+p {
+  text-align: center;
+}
+.post-detail-container {
+  display: flex;
+  justify-content: center;
+}
+.post-card {
+  text-align: center;
+  min-width: 600px;
+  margin: 2rem;
+}
+.post-card-actions {
+  text-align: center;
+}
