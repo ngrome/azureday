@@ -16,7 +16,15 @@ export class DashComponent implements OnInit {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Blog', content: 'Blog Controls', cols: 1, rows: 1 },
+          {
+            title: 'Blog',
+            action: 'Add',
+            actionUrl: 'blog/add',
+            content: 'Blog Controls',
+            path: 'blog/add',
+            cols: 1,
+            rows: 1,
+          },
           { title: 'Card 2', cols: 1, rows: 1 },
           { title: 'Card 3', cols: 1, rows: 1 },
           { title: 'Card 4', cols: 1, rows: 1 },
@@ -24,7 +32,15 @@ export class DashComponent implements OnInit {
       }
 
       return [
-        { title: 'Blog', cols: 2, rows: 1 },
+        {
+          title: 'Blog',
+          action: 'Add',
+          actionUrl: 'blog/add',
+          content: 'Blog Controls',
+          path: 'blog/add',
+          cols: 1,
+          rows: 1,
+        },
         { title: 'Card 2', cols: 1, rows: 1 },
         { title: 'Card 3', cols: 1, rows: 2 },
         { title: 'Card 4', cols: 1, rows: 1 },

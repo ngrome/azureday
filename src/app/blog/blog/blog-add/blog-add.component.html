@@ -1,3 +1,44 @@
-<p>
-  blog add works!
-</p>
+<mat-toolbar>
+  <span class="fill-remaining-space"></span>
+  <span>Add New Blog</span>
+  <span class="fill-remaining-space"></span>
+</mat-toolbar>
+
+<form [formGroup]="form" class="normal-form">
+  <div class="controls-container">
+    <mat-grid-list cols="2" rowHeight="300px">
+      <mat-grid-tile>
+        <div class="controls-container">
+          <input type="hidden" formControlName="$key" />
+          <mat-form-field>
+            <input formControlName="name" matInput placeholder="Blog Name" />
+          </mat-form-field>
+          <mat-form-field>
+            <input formControlName="description" matInput placeholder="Blog Description" />
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
+              from Japan. A small, agile dog that copes very well with mountainous terrain, the
+              Shiba Inu was originally bred for hunting.
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Create</button>
+            <button mat-button>Home</button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</form>
