@@ -8,7 +8,7 @@ import { MatGridListModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
@@ -23,6 +23,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
+    MatProgressSpinnerModule,
     LayoutModule,
   ],
   exports: [
@@ -35,6 +36,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
+    MatProgressSpinnerModule,
     LayoutModule,
   ],
 })

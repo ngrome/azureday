@@ -38,8 +38,6 @@ export class BlogPostService {
   }
 
   findBlogPostById(blogPostId: number): Observable<BlogPost> {
-    return this.http
-      .get<BlogPost>(`${environment.backendUrl}/api/BlogPosts/${blogPostId}`)
-      .pipe(tap(res => console.log(res)));
+    return this.http.get<BlogPost>(`${environment.backendUrl}/api/BlogPosts/${blogPostId}`);
   }
 }

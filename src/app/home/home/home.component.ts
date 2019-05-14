@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Blog } from 'src/app/shared/models';
+import { Blog, BlogPost } from 'src/app/shared/models';
 import { BlogService } from '../../blog/blog/blog.service';
 import { BlogPostService } from '../../blog/blogpost/blogpost.service';
 import { Observable } from 'rxjs';
@@ -13,7 +13,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
   title = 'Azure Day 2019';
   blogs$: Observable<Blog[]>;
-  posts = [];
+  posts$: Observable<BlogPost[]>;
 
   constructor(
     private router: Router,
@@ -26,8 +26,8 @@ export class HomeComponent implements OnInit {
     this.blogs$ = this.blogService.findAllBlog().pipe(map(blogs => blogs));
   }
 
-  handleBlogPost(blog) {
-    this.blogPostService.findAllBlogPostByBlogId(blog.blogId).subscribe(res => (this.posts = res));
+  handleBlog(blog) {
+    this.posts$ = this.blogPostService.findAllBlogPostByBlogId(blog.blogId);
   }
 
   handlePost(blogPostId: number) {

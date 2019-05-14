@@ -1,7 +1,7 @@
 <h2 class="title">Welcome to {{ title }}!</h2>
 <app-blog-list
   [blogs]="blogs$ | async"
-  [posts]="posts"
-  (blogClicked)="handleBlogPost($event)"
+  [posts]="posts$ | async"
+  (blogClicked)="handleBlog($event)"
   (postClicked)="handlePost($event)"
 ></app-blog-list>

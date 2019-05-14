@@ -12,10 +12,12 @@ export class BlogListComponent {
   @Output() blogClicked: EventEmitter<Blog> = new EventEmitter<Blog>();
   @Output() postClicked: EventEmitter<BlogPost> = new EventEmitter<BlogPost>();
   @Input() posts = [];
+  isLoading = true;
 
   constructor(private blogPostService: BlogPostService) {}
 
   selectedBlog({ index }) {
+    this.isLoading = false;
     this.blogClicked.emit(this.blogs[index]);
   }
 
