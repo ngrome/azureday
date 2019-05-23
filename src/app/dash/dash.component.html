@@ -15,10 +15,9 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>
-                <a [routerLink]="card.actionUrl">{{ card.action }} </a>
+              <button mat-menu-item *ngFor="let action of card.actions" [routerLink]="action.url">
+                {{ action.label }}
               </button>
-              <button mat-menu-item>Remove</button>
             </mat-menu>
           </mat-card-title>
         </mat-card-header>

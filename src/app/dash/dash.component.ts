@@ -18,10 +18,13 @@ export class DashComponent implements OnInit {
         return [
           {
             title: 'Blog',
-            action: 'Add',
-            actionUrl: 'blog/add',
+            actions: [
+              {
+                label: 'Add',
+                url: 'blog/add',
+              },
+            ],
             content: 'Blog Controls',
-            path: 'blog/add',
             cols: 1,
             rows: 1,
           },
@@ -34,10 +37,13 @@ export class DashComponent implements OnInit {
       return [
         {
           title: 'Blog',
-          action: 'Add',
-          actionUrl: 'blog/add',
+          actions: [
+            {
+              label: 'Add',
+              url: 'blog/add',
+            },
+          ],
           content: 'Blog Controls',
-          path: 'blog/add',
           cols: 1,
           rows: 1,
         },

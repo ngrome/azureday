@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatCardModule } from '@angular/material/card';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatGridListModule } from '@angular/material';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import {
+  MatButtonModule,
+  MatGridListModule,
+  MatCardModule,
+  MatMenuModule,
+  MatIconModule,
+  MatTabsModule,
+  MatSidenavModule,
+  MatListModule,
+  MatToolbarModule,
+  MatProgressSpinnerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatTableModule,
+} from '@angular/material';
 
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -29,6 +32,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatProgressSpinnerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
     LayoutModule,
   ],
   exports: [
@@ -44,6 +48,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatProgressSpinnerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
     LayoutModule,
   ],
 })
